@@ -1,0 +1,19 @@
+{
+  "name": "programmable_bot",
+  "version": "1.0.0",
+  "description": "A programmable Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/bot.js"
+  },
+  "author": "John Ingve Olsen",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.0.0",
+    "vm2": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
