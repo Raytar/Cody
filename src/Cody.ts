@@ -2,6 +2,7 @@
 import * as Discord from 'discord.js';
 import {VM} from 'vm2';
 import * as tsc from 'typescript-compiler';
+import * as sandbox from './Sandbox';
 
 export interface CodeSample {
     lang: string;
@@ -34,7 +35,8 @@ export class Cody {
     protected runVM(code: string): string {
         //TODO: Create a sandbox object to use as an api
         let vm = new VM({
-            timeout: 5000
+            timeout: 5000,
+            sandbox: sandbox
         });
 
         let result; 
@@ -43,6 +45,10 @@ export class Cody {
             result = vm.run(code);
         } catch (error) {
             result = error.message;
+        }
+
+        if (sandbox.out != '') {
+            result = sandbox.out;
         }
 
         return this.padOutput(result);
