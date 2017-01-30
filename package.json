@@ -1,19 +1,26 @@
 {
   "name": "programmable_bot",
   "version": "1.0.0",
+  "private": true,
   "description": "A programmable Discord bot",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register test/*Test.ts",
+    "prestart": "tsc || echo",
     "start": "node build/bot.js"
   },
   "author": "John Ingve Olsen",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.0.0",
+    "typescript-compiler": "^1.4.1-2",
     "vm2": "^3.1.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "mocha": "^3.2.0",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.5"
   }
 }
