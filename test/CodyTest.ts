@@ -18,7 +18,7 @@ let foo = 1;
 let bar = 2;
 let baz = (x, y) => x + y;
 
-baz(foo, bar);
+print(baz(foo, bar));
 \`\`\``;
 
 const test_ts = `\`\`\`typescript
@@ -26,7 +26,7 @@ let foo = 1;
 let bar = 2;
 let baz = (x: number, y: number) => x + y;
 
-baz(foo, bar);
+print(baz(foo, bar));
 \`\`\``;
 
 const code_js = `\
@@ -34,7 +34,7 @@ let foo = 1;
 let bar = 2;
 let baz = (x, y) => x + y;
 
-baz(foo, bar);
+print(baz(foo, bar));
 `;
 
 const code_ts = `\
@@ -42,7 +42,7 @@ let foo = 1;
 let bar = 2;
 let baz = (x: number, y: number) => x + y;
 
-baz(foo, bar);
+print(baz(foo, bar));
 `;
 
 const tests: Test[] = [
@@ -50,13 +50,13 @@ const tests: Test[] = [
         test: test_js,
         lang: 'javascript',
         code: code_js,
-        output: '```3```'
+        output: '```3\n```'
     },
     {
         test: test_ts,
         lang: 'typescript',
         code: code_ts,
-        output: '```3```'
+        output: '```3\n```'
     }
 ];
 
