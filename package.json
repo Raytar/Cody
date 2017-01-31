@@ -12,6 +12,8 @@
   "author": "John Ingve Olsen",
   "license": "ISC",
   "dependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.38",
     "discord.js": "^11.0.0",
     "typescript-compiler": "^1.4.1-2",
     "vm2": "^3.1.0"

@@ -1,10 +1,9 @@
-/// <reference path="../typings/globals/mocha/index.d.ts" />
-/// <reference path="../typings/modules/chai/index.d.ts" />
 'use strict';
 
 import * as Discord from 'discord.js';
 import {Cody, CodeSample} from '../src/Cody';
 import {assert} from 'chai';
+import 'mocha';
 
 interface Test {
     test: string;
