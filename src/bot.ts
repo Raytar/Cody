@@ -13,6 +13,7 @@ const config: Config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
 bot.on('ready', () => {
     console.log('Bot is ready!');
+    bot.user.setGame('Learning to code');
 });
 
 bot.on('message', (msg) => {
