@@ -50,7 +50,7 @@ export class Cody {
         if (sandbox.out != '') {
             result = sandbox.out;
         }
-
+        sandbox.out = '';
         return this.padOutput(result);
     }
 
